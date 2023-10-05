@@ -52,6 +52,16 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Cattle",
     }
   );
+  sequelize.clearModelsCache();
+
+// Synchronize the model with the database (creates the table if it doesn't exist)
+sequelize.sync()
+  .then(() => {
+    console.log("Database and tables have been synchronized.");
+  })
+  .catch((error) => {
+    console.error("Error synchronizing database:", error);
+  });
 
   return Cattle;
 };
