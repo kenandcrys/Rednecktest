@@ -49,9 +49,9 @@ app.use(routes); // Connect all the routes
 
 
 // //root route handler
-// app.get('/', (req, res) => {
-//   res.send('Welcome to the home page!');
-// });
+app.get('/', (req, res) => {
+  res.send('Welcome to the home page!');
+});
 
 
 
