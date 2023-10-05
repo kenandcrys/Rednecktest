@@ -461,7 +461,7 @@ module.exports = {
           ],
           {}
         );
-      } else if (tableName === "Cattles") {
+      } else if (tableName === "Cattle") {
         await queryInterface.bulkInsert(
           tableName,
           [
@@ -519,7 +519,7 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     // Drop all the tables in reverse order
     const tableNames = [
-      "Cattles",
+      "Cattle",
       "Equine",
       "Poultry",
       "Rabbit",
