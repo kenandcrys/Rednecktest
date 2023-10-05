@@ -46,9 +46,7 @@ module.exports = {
           type: Sequelize.DATE,
           defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
         },
-      }, {
-        freezeTableName: true, 
-      });
+      }
     }
 
     // Insert data into the tables
