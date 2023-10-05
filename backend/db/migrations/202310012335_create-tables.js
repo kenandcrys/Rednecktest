@@ -16,12 +16,6 @@ module.exports = {
     // Loop through table names and create each table
     for (const tableName of tableNames) {
       await queryInterface.createTable(tableName, {
-
-        id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
-          autoIncrement: true,
-        },
         name: {
           type: Sequelize.TEXT,
           allowNull: false,
@@ -52,10 +46,9 @@ module.exports = {
           type: Sequelize.DATE,
           defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
         },
-      }),
-      {
-        freezeTableName:true,
-      }
+      }, {
+        freezeTableName: true, 
+      });
     }
 
     // Insert data into the tables
