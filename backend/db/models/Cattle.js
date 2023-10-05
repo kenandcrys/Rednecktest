@@ -4,6 +4,7 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Cattle extends Model {
     // You can define custom methods or validations here
+
   }
 
   Cattle.init(
@@ -45,23 +46,10 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      freezeTableName: true,
-    },
-    {
       sequelize,
       modelName: "Cattle",
-    }
+      freezeTableName: true,
+    },
   );
-  sequelize.clearModelsCache();
-
-// Synchronize the model with the database (creates the table if it doesn't exist)
-sequelize.sync()
-  .then(() => {
-    console.log("Database and tables have been synchronized.");
-  })
-  .catch((error) => {
-    console.error("Error synchronizing database:", error);
-  });
-
   return Cattle;
 };
