@@ -2,11 +2,11 @@
 
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Cattle extends Model {
+  class cattle extends Model {
     // You can define custom methods or validations here
   }
 
-  Cattle.init(
+  cattle.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -46,8 +46,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "Cattle",
+      modelName: "cattle",
     }
   );
-  return Cattle;
+  return cattle;
 };

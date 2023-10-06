@@ -10,7 +10,7 @@ module.exports = {
       "Rabbit",
       "Poultry",
       "Equine",
-      "Cattle",
+      "cattle",
     ];
     
     // Loop through table names and create each table
@@ -459,7 +459,7 @@ module.exports = {
           ],
           {}
         );
-      } else if (tableName === "Cattle") {
+      } else if (tableName === "cattle") {
         await queryInterface.bulkInsert(
           tableName,
           [
@@ -484,8 +484,8 @@ module.exports = {
               updatedAt: new Date(),
             },
             {
-              name: "Cattle Fattener",
-              description: "Used to put weight on Cattle",
+              name: "cattle Fattener",
+              description: "Used to put weight on cattle",
               pricePerBag: 20.50,
               pricePer20: 19.50,
               pricePer40: 19.00,
@@ -503,7 +503,7 @@ module.exports = {
               createdAt: new Date(),
               updatedAt: new Date(),
             },
-            // Add more records for the "Cattle" table as needed...
+            // Add more records for the "cattle" table as needed...
           ],
           {}
         );
@@ -517,7 +517,7 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     // Drop all the tables in reverse order
     const tableNames = [
-      "Cattle",
+      "cattle",
       "Equine",
       "Poultry",
       "Rabbit",
