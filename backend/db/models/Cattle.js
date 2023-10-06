@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "Cattle", 
+      modelName: "Cattle", // This is the important change. We are now explicitly specifying the table name and telling Sequelize not to pluralize it.
       freezeTableName: true,
     }
   );
