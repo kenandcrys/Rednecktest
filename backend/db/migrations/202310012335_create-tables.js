@@ -10,9 +10,9 @@ module.exports = {
       "Rabbit",
       "Poultry",
       "Equine",
-      "cattle",
+      "Cattle",
     ];
-    
+
     // Loop through table names and create each table
     for (const tableName of tableNames) {
       await queryInterface.createTable(tableName, {
@@ -58,9 +58,9 @@ module.exports = {
             {
               name: "14% Hog",
               description: "14% protein hog feed",
-              pricePerBag: 21.00,
-              pricePer20: 20.00,
-              pricePer40: 19.50,
+              pricePerBag: 21.0,
+              pricePer20: 20.0,
+              pricePer40: 19.5,
               url: "https://i.imgur.com/Vnmq7kg.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -68,9 +68,9 @@ module.exports = {
             {
               name: "16% Hog",
               description: "16% protein hog feed",
-              pricePerBag: 22.00,
-              pricePer20: 21.00,
-              pricePer40: 20.50,
+              pricePerBag: 22.0,
+              pricePer20: 21.0,
+              pricePer40: 20.5,
               url: "https://i.imgur.com/szlzE8G.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -96,9 +96,9 @@ module.exports = {
             {
               name: "Rolled Barley",
               description: "Rolled barley",
-              pricePerBag: 20.00,
-              pricePer20: 19.00,
-              pricePer40: 18.50,
+              pricePerBag: 20.0,
+              pricePer20: 19.0,
+              pricePer40: 18.5,
               url: "https://i.imgur.com/K0RcxwH.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -106,9 +106,9 @@ module.exports = {
             {
               name: "Rolled Corn",
               description: "Rolled corn",
-              pricePerBag: 20.00,
-              pricePer20: 19.00,
-              pricePer40: 18.50,
+              pricePerBag: 20.0,
+              pricePer20: 19.0,
+              pricePer40: 18.5,
               url: "https://i.imgur.com/m6wI0jU.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -116,9 +116,9 @@ module.exports = {
             {
               name: "Soybean Meal",
               description: "Natural source of protein",
-              pricePerBag: 28.00,
-              pricePer20: 27.00,
-              pricePer40: 26.50,
+              pricePerBag: 28.0,
+              pricePer20: 27.0,
+              pricePer40: 26.5,
               url: "https://i.imgur.com/4IaUJci.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -146,9 +146,9 @@ module.exports = {
             {
               name: "Whole Oats",
               description: "Whole oats",
-              pricePerBag: 22.50,
-              pricePer20: 21.50,
-              pricePer40: 21.00,
+              pricePerBag: 22.5,
+              pricePer20: 21.5,
+              pricePer40: 21.0,
               url: "https://i.imgur.com/0iE7KlC.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -174,9 +174,9 @@ module.exports = {
             {
               name: "Shirley Sheep Pellet",
               description: "16% protein sheep feed",
-              pricePerBag: 22.50,
-              pricePer20: 21.50,
-              pricePer40: 21.00,
+              pricePerBag: 22.5,
+              pricePer20: 21.5,
+              pricePer40: 21.0,
               url: "https://i.imgur.com/5sqHIj6.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -194,9 +194,9 @@ module.exports = {
             {
               name: "Sheep and Goat",
               description: "Standardized sheep and goat feed",
-              pricePerBag: 21.50,
-              pricePer20: 20.50,
-              pricePer40: 20.00,
+              pricePerBag: 21.5,
+              pricePer20: 20.5,
+              pricePer40: 20.0,
               url: "https://i.imgur.com/7MxJM6m.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -212,9 +212,9 @@ module.exports = {
             {
               name: "16% Rabbit",
               description: "16% protein rabbit feed",
-              pricePerBag: 22.50,
-              pricePer20: 21.50,
-              pricePer40: 21.00,
+              pricePerBag: 22.5,
+              pricePer20: 21.5,
+              pricePer40: 21.0,
               url: "https://i.imgur.com/ZS8IB7K.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -250,19 +250,20 @@ module.exports = {
             {
               name: "Broiler Grower",
               description: "21% protein medicated feed for meat birds",
-              pricePerBag: 25.00,
-              pricePer20: 24.00,
-              pricePer40: 23.50,
+              pricePerBag: 25.0,
+              pricePer20: 24.0,
+              pricePer40: 23.5,
               url: "https://i.imgur.com/KxzEO7M.png",
               createdAt: new Date(),
               updatedAt: new Date(),
             },
             {
               name: "Chick Start",
-              description: "20% protein Medicated and non-medicated chick start",
-              pricePerBag: 23.00,
-              pricePer20: 22.00,
-              pricePer40: 21.50,
+              description:
+                "20% protein Medicated and non-medicated chick start",
+              pricePerBag: 23.0,
+              pricePer20: 22.0,
+              pricePer40: 21.5,
               url: "https://i.imgur.com/hLoksc4.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -270,9 +271,9 @@ module.exports = {
             {
               name: "Cracked Corn",
               description: "Cracked corn",
-              pricePerBag: 20.50,
-              pricePer20: 19.50,
-              pricePer40: 19.00,
+              pricePerBag: 20.5,
+              pricePer20: 19.5,
+              pricePer40: 19.0,
               url: "https://i.imgur.com/kLkJCoB.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -289,20 +290,22 @@ module.exports = {
             },
             {
               name: "Game Bird",
-              description: "27% protein game bird feed (pellet and crumble available)",
-              pricePerBag: 25.00,
-              pricePer20: 24.00,
-              pricePer40: 23.50,
+              description:
+                "27% protein game bird feed (pellet and crumble available)",
+              pricePerBag: 25.0,
+              pricePer20: 24.0,
+              pricePer40: 23.5,
               url: "https://i.imgur.com/kmZumHM.png",
               createdAt: new Date(),
               updatedAt: new Date(),
             },
             {
               name: "Layer Ration Complete",
-              description: "16% protein Egg Layer blend (pellet and crumble available)",
-              pricePerBag: 21.00,
-              pricePer20: 20.00,
-              pricePer40: 19.50,
+              description:
+                "16% protein Egg Layer blend (pellet and crumble available)",
+              pricePerBag: 21.0,
+              pricePer20: 20.0,
+              pricePer40: 19.5,
               url: "https://i.imgur.com/8ePJaRx.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -310,9 +313,9 @@ module.exports = {
             {
               name: "Oyster Shell",
               description: "Crushed oyster shells",
-              pricePerBag: 24.00,
-              pricePer20: 23.00,
-              pricePer40: 22.50,
+              pricePerBag: 24.0,
+              pricePer20: 23.0,
+              pricePer40: 22.5,
               url: "https://i.imgur.com/KxzEO7M.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -320,9 +323,9 @@ module.exports = {
             {
               name: "Two Way Scratch",
               description: "Cracked corn and barley",
-              pricePerBag: 21.00,
-              pricePer20: 20.00,
-              pricePer40: 19.50,
+              pricePerBag: 21.0,
+              pricePer20: 20.0,
+              pricePer40: 19.5,
               url: "https://i.imgur.com/X7BCqHD.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -358,9 +361,9 @@ module.exports = {
             {
               name: "Beet Pulp",
               description: "Pelletized beet pulp",
-              pricePerBag: 21.50,
-              pricePer20: 20.50,
-              pricePer40: 20.00,
+              pricePerBag: 21.5,
+              pricePer20: 20.5,
+              pricePer40: 20.0,
               url: "https://i.imgur.com/dPeHMom.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -408,9 +411,9 @@ module.exports = {
             {
               name: "Rice Bran",
               description: "Natural source of fiber and magnesium",
-              pricePerBag: 25.00,
-              pricePer20: 24.00,
-              pricePer40: 23.50,
+              pricePerBag: 25.0,
+              pricePer20: 24.0,
+              pricePer40: 23.5,
               url: "https://i.imgur.com/KxzEO7M.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -418,9 +421,9 @@ module.exports = {
             {
               name: "Rolled Oats",
               description: "Rolled oats",
-              pricePerBag: 23.00,
-              pricePer20: 22.00,
-              pricePer40: 21.50,
+              pricePerBag: 23.0,
+              pricePer20: 22.0,
+              pricePer40: 21.5,
               url: "https://i.imgur.com/vqHiTH0.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -448,9 +451,9 @@ module.exports = {
             {
               name: "Wheat Bran",
               description: "Natural source of fiber",
-              pricePerBag: 20.00,
-              pricePer20: 19.00,
-              pricePer40: 18.50,
+              pricePerBag: 20.0,
+              pricePer20: 19.0,
+              pricePer40: 18.5,
               url: "https://i.imgur.com/KxzEO7M.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -459,16 +462,16 @@ module.exports = {
           ],
           {}
         );
-      } else if (tableName === "cattle") {
+      } else if (tableName === "Cattle") {
         await queryInterface.bulkInsert(
           tableName,
           [
             {
               name: "16% Dairy",
               description: "16% protein dairy cow feed",
-              pricePerBag: 20.00,
-              pricePer20: 19.00,
-              pricePer40: 18.50,
+              pricePerBag: 20.0,
+              pricePer20: 19.0,
+              pricePer40: 18.5,
               url: "https://i.imgur.com/sZwrxu6.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -484,11 +487,11 @@ module.exports = {
               updatedAt: new Date(),
             },
             {
-              name: "cattle Fattener",
-              description: "Used to put weight on cattle",
-              pricePerBag: 20.50,
-              pricePer20: 19.50,
-              pricePer40: 19.00,
+              name: "Cattle Fattener",
+              description: "Used to put weight on Cattle",
+              pricePerBag: 20.5,
+              pricePer20: 19.5,
+              pricePer40: 19.0,
               url: "https://i.imgur.com/TCQNEDy.png",
               createdAt: new Date(),
               updatedAt: new Date(),
@@ -503,7 +506,7 @@ module.exports = {
               createdAt: new Date(),
               updatedAt: new Date(),
             },
-            // Add more records for the "cattle" table as needed...
+            // Add more records for the "Cattle" table as needed...
           ],
           {}
         );
@@ -517,7 +520,7 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     // Drop all the tables in reverse order
     const tableNames = [
-      "cattle",
+      "Cattle",
       "Equine",
       "Poultry",
       "Rabbit",

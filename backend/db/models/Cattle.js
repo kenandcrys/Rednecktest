@@ -1,11 +1,11 @@
 const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-  class cattle extends Model {
+  class Cattle extends Model {
     // You can define custom methods or validations here
   }
 
-  cattle.init(
+  Cattle.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -45,10 +45,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: "cattle", // This is the important change. We are now explicitly specifying the table name and telling Sequelize not to pluralize it.
+      modelName: "Cattle", // This is the important change. We are now explicitly specifying the table name and telling Sequelize not to pluralize it.
       freezeTableName: true,
     }
   );
 
-  return cattle;
+  return Cattle;
 };

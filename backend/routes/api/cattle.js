@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { cattle } = require("../../db/models");
+const { Cattle } = require("../../db/models");
 
-// ROUTE TO GET ALL OF THE cattle
+// ROUTE TO GET ALL OF THE Cattle
 router.get("/", async (_req, res, next) => {
   try {
-    const cattleInfo= await cattle.findAll();
-    
-    res.json(cattleInfo);
+    const CattleInfo = await Cattle.findAll();
+
+    res.json(CattleInfo);
   } catch (error) {
     next(error);
   }

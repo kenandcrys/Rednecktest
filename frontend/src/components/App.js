@@ -20,9 +20,6 @@ import {
   Outlet,
 } from "react-router-dom";
 
-
-
-
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -98,7 +95,7 @@ const Root = () => {
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <Link to="/cattle" className="dropdown-item">
+                      <Link to="/Cattle" className="dropdown-item">
                         Cattle
                       </Link>
                     </li>

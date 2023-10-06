@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Seed data for the 'Cattle' table
-    const cattleData = [
+    const CattleData = [
       {
         name: "Cow",
         description: "A cow for testing",
@@ -36,7 +36,7 @@ module.exports = {
       },
     ];
 
-    await queryInterface.bulkInsert("Cattle", cattleData, {});
+    await queryInterface.bulkInsert("Cattle", CattleData, {});
 
     // Seed data for the 'Swine' table
     const swineData = [
