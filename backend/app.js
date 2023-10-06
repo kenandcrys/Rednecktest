@@ -11,7 +11,7 @@ const { environment } = require("./config");
 const isProduction = environment === "production";
 
 const routes = require("./routes");
-const CattleRouter = require("./routes/api/cattle");
+const CattleRouter = require("./routes/api/Cattle");
 
 const app = express();
 

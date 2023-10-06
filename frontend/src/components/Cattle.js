@@ -7,7 +7,7 @@ export default function Cattle() {
   useEffect(() => {
     axios
       .get(
-        "postgres://crystal_user:Ee3B6rwYCfOX07UkdTQFswRXuUv0NK3y@dpg-ckfom06afg7c73aapglg-a.ohio-postgres.render.com/crystal/api/Cattles"
+        "http://localhost:3000"
       )
       .then((response) => {
         setCattleData(response.data);
@@ -17,7 +17,7 @@ export default function Cattle() {
       });
   }, []);
 
-  const feedCard = CattleData.map((product, index) => (
+  const feedCard = CattleData.map((product, index) => {
     <div className="card flex centered" key={index}>
       <img
         src={product.url}
@@ -36,7 +36,7 @@ export default function Cattle() {
         </p>
       </div>
     </div>
-  ));
+});
 
   return (
     <div className="centered">

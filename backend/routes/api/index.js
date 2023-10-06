@@ -7,7 +7,7 @@ const { restoreUser } = require("../../utils/auth.js");
 router.use(restoreUser);
 
 //const routes = require('./routes');
-const CattleRouter = require("./cattle.js");
+const CattleRouter = require("./Cattle.js");
 
 // Register your API routes
 router.use("/cattle", CattleRouter);
