@@ -4,9 +4,31 @@ import axios from "axios";
 export default function Cattle() {
   const [cattleData, setCattleData] = useState([]);
 
+
+  const { Client } = require('pg');
+
+  const client = new Client({
+    connectionString: 'PGPASSWORD=Ee3B6rwYCfOX07UkdTQFswRXuUv0NK3y psql -h dpg-ckfom06afg7c73aapglg-a.ohio-postgres.render.com -U crystal_user crystal',
+  });
+  
+  client.connect()
+    .then(() => {
+      console.log('Connected to PostgreSQL database');
+      // Perform your database queries here
+    })
+    .catch((error) => {
+      console.error('Error connecting to PostgreSQL:', error);
+    });
+
+
+
+
+
+
+
   useEffect(() => {
     axios
-      .get("https://redneckcattlecheck.onrender.com/api/cattle")
+      .get("postgres://crystal_user:Ee3B6rwYCfOX07UkdTQFswRXuUv0NK3y@dpg-ckfom06afg7c73aapglg-a.ohio-postgres.render.com/crystal/api/Cattles")
       .then((response) => {
         setCattleData(response.data);
       })

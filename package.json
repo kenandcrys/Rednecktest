@@ -3,7 +3,7 @@
     "express-validator": "^7.0.1",
     "moment": "^2.29.4"
   },
-  "name": "airbnb",
+  "name": "RedNeck",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,9 @@
     "dev:backend": "npm start --prefix backend",
     "sequelize": "npm run --prefix backend sequelize",
     "sequelize-cli": "npm run --prefix backend sequelize-cli",
-    "start": "npm start --prefix backend && npm start --prefix frontend",
+    "start": "npm start --prefix backend ",
     "start:backend": "npm start --prefix backend",
-    "start:frontend": "npm start --prefix frontend",
+   
     "build": "npm run --prefix backend build && npm run --prefix frontend build",
     "build:backend": "npm run --prefix backend build",
     "build:frontend": "npm run --prefix frontend build"
