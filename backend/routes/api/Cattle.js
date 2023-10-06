@@ -9,7 +9,7 @@ router.get("/", async (_req, res, next) => {
 
     res.json(CattleInfo);
   } catch (error) {
-    next(error);
+    next(error)
   }
 });
 
