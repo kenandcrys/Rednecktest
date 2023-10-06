@@ -6,7 +6,7 @@ export default function Cattle() {
 
   useEffect(() => {
     axios
-      .get("https://redneckcattlecheck.onrender.com/api/cattle")
+      .get("http://localhost:10000/api/cattle")
       .then((response) => {
         setCattleData(response.data);
       })

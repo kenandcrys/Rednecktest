@@ -11,7 +11,7 @@ const { environment } = require("./config");
 const isProduction = environment === "production";
 
 const routes = require("./routes");
-const CattleRouter = require("./routes/api/Cattle");
+const cattleRouter = require("./routes/api/Cattle");
 
 const app = express();
 
@@ -44,7 +44,7 @@ app.use(
 
 //const routes = require('./routes');
 //app.use('/api/users', userRoutes);
-app.use("/api/Cattle", CattleRouter);
+app.use("/api/cattle", cattleRouter);
 app.use(routes); // Connect all the routes
 
 // //root route handler

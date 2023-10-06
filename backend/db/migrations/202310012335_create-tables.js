@@ -16,6 +16,12 @@ module.exports = {
     // Loop through table names and create each table
     for (const tableName of tableNames) {
       await queryInterface.createTable(tableName, {
+        id: {
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
+          allowNull: false,
+        },
         name: {
           type: Sequelize.TEXT,
           allowNull: false,
