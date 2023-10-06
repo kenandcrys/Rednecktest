@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CattleDB from "../../../backend/api/Cattle";
 
 export default function Cattle() {
   const [cattleData, setCattleData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://localhost:3000/api/cattle")
+      .get("https://redneckcattlecheck.onrender.com/api/cattle")
       .then((response) => {
         setCattleData(response.data);
       })
-      .then(() => {
-          const feedCard = CattleDB.map((product, index) => (
-           <div className="card flex centered" key={index}>
-           <img
-           src={product.url}
-           className="card-img margin-15"
-           alt={product.name}
-            />
+      .catch((error) => {
+        console.error("Error fetching cattle data:", error);
+      });
+  }, []);
+
+  const feedCard = cattleData.map((product, index) => (
+
+    
+    <div className="card flex centered" key={index}>
+      <img
+        src={product.url}
+        className="card-img margin-15"
+        alt={product.name}
+      />
       <div className="centered">
         <h1 className="card-header bold">{product.name}</h1>
         <p className="card-text">{product.description}</p>
@@ -36,9 +41,5 @@ export default function Cattle() {
         {feedCard}
       </div>
     </div>
-    )
-      .catch((error) => {
-        console.error("Error fetching cattle data:", error);
-      })
-  }, []);console.log(cattleData);
-})}
+    );
+}
