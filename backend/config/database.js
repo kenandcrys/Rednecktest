@@ -1,26 +1,34 @@
-// backend/config/database.js
-const config = require('./index');
+const { Sequelize } = require('sequelize');
+
+const commonConfig = {
+  seederStorage: 'sequelize',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  },
+  define: {
+    schema: process.env.SCHEMA
+  }
+};
 
 module.exports = {
   development: {
     storage: './db/dev.db',
-    dialect: "sqlite",
-    seederStorage: "sequelize",
+    dialect: 'sqlite',
     logQueryParameters: true,
-    typeValidation: true
+    typeValidation: true,
+    ...commonConfig
   },
   production: {
-    use_env_variable: 'DATABASE_URL',
     dialect: 'postgres',
-    seederStorage: 'sequelize',
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false
-      }
-    },
-    define: {
-      schema: process.env.SCHEMA
-    }
+    host: 'dpg-ckg3f4uct0pc73a9i6qg-a',
+    port: 5432,
+    username: 'redneck_user',
+    password: process.env.PASSWORD, // Add your password here if applicable
+    database: 'RedNeck',
+    ...commonConfig
   }
 };
+
