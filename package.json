@@ -22,7 +22,6 @@
     "build": "npm run --prefix backend build && npm run --prefix frontend build",
     "build:backend": "npm run --prefix backend build",
     "build:frontend": "npm run --prefix frontend build",
-    "db:migrate-and-seed": "npm run sequelize --prefix backend db:migrate -- --force && npm run sequelize --prefix backend db:seed:all"
-
+    "db:migrate-and-seed": "npm run sequelize --prefix backend db:migrate && npm run sequelize --prefix backend db:seed:all"
   }
 }
