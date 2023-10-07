@@ -6,7 +6,7 @@ export default function Cattle() {
 
   useEffect(() => {
     axios
-      .get('localhost10000/api/cattle')
+      .get('/')
       .then((response) => {
         setCattleData(response.data);
       })

@@ -11,6 +11,11 @@ module.exports = {
   },
   production: {
     use_env_variable: 'DATABASE_URL',
+    password:'6EoewyZpN5VOJnkLu43DHBdbhzNaOtf1',
+    username:"dev_cbzd_user",
+    database:"dev_cbzd",
+    port: 5432,
+    hostName:"dpg-ckgnbe212bvs7382r170-a",
     dialect: 'postgres',
     seederStorage: 'sequelize',
     dialectOptions: {
