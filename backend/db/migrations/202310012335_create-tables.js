@@ -1,5 +1,7 @@
 "use strict";
 
+const { sequelize } = require("../models");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Define the table names
@@ -519,6 +521,7 @@ module.exports = {
       }
       // Add similar code blocks for other tables here...
     }
+    await sequelize.sync();
 
     return Promise.resolve();
   },
