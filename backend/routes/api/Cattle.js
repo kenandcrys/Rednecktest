@@ -13,4 +13,28 @@ router.get("/", async (_req, res, next) => {
   }
 });
 
+router.post('/', async (req, res, next) => {
+  try {
+   
+    const { name, description, pricePerBag, pricePer20, pricePer40, url } = req.body;
+
+    // Create a new Cattle record
+    const newCattle = await Cattle.create({
+      name,
+      description,
+      pricePerBag,
+      pricePer20,
+      pricePer40,
+      url,
+    });
+
+  
+    res.status(201).json(newCattle);
+  } catch (error) {
+
+    next(error);
+  }
+});
+
+
 module.exports = router;
