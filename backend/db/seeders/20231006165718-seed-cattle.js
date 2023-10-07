@@ -44,7 +44,7 @@
 
     module.exports = {
       up: async (queryInterface) => {
-        return queryInterface.bulkInsert('Cattle', myDataData);
+        return queryInterface.bulkInsert('Cattle', myData);
       },
     
       down: async (queryInterface, Sequelize) => {
