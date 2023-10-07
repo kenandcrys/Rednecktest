@@ -15,6 +15,16 @@ const cattleRouter = require("./routes/api/Cattle");
 
 const app = express();
 
+
+// Just added so dont be afraid to delete
+const port = process.env.PORT || 3000;
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', (req, res) =>{
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+
+
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(express.json());
@@ -48,9 +58,9 @@ app.use("/api/cattle", cattleRouter);
 app.use(routes); // Connect all the routes
 
 // //root route handler
-app.get("/", (req, res) => {
-  res.send("Welcome to the home page!");
-});
+// app.get("/", (_req, res) => {
+//   res.send("Welcome to the home page!");
+// });
 
 // Catch unhandled requests and forward to error handler.
 app.use((_req, _res, next) => {
