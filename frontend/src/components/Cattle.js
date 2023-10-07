@@ -6,7 +6,7 @@ export default function Cattle() {
 
   useEffect(() => {
     axios
-      .get('https://redneckcattlecheck.onrender.com/api/cattle')
+      .get(`${process.env.DATABASE_URL}`)
       .then((response) => {
         setCattleData(response.data);
       })
