@@ -3,7 +3,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const tableNames = [
-   
       "Cattle",
       // Add other table names as needed...
     ];
@@ -52,26 +51,38 @@ module.exports = {
             url: "https://i.imgur.com/Ap1wtAZ.png",
             createdAt: new Date(),
             updatedAt: new Date(),
-          },
+          }
           // Add more data for the "Cattle" table as needed...
         );
       }
       // Add similar data blocks for other tables here...
 
-      await queryInterface.bulkInsert(tableName, data, {});
+      try {
+        console.log(`Seeding data into table "${tableName}"...`);
+        await queryInterface.bulkInsert(tableName, data, {});
+        console.log(`Seeding completed for table "${tableName}".`);
+      } catch (error) {
+        console.error(`Error seeding data into table "${tableName}":`, error);
+      }
     }
   },
 
   down: async (queryInterface, Sequelize) => {
     // Add commands to remove seeded data if needed
     // For example, you can use queryInterface.bulkDelete to delete all rows in the tables
-    const tableNames = [ 
+    const tableNames = [
       "Cattle",
       // Add other table names as needed...
     ];
 
     for (const tableName of tableNames) {
-      await queryInterface.bulkDelete(tableName, null, {});
+      try {
+        console.log(`Deleting seeded data from table "${tableName}"...`);
+        await queryInterface.bulkDelete(tableName, null, {});
+        console.log(`Deletion completed for table "${tableName}".`);
+      } catch (error) {
+        console.error(`Error deleting seeded data from table "${tableName}":`, error);
+      }
     }
   }
 };
