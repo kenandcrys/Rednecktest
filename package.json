@@ -7,7 +7,7 @@
     "sequelize": "^6.33.0",
     "sequelize-cli": "^6.6.1"
   },
-  "name": "RedNeck",
+  "name": "redneck",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
     "build": "npm run --prefix backend build && npm run --prefix frontend build",
     "build:backend": "npm run --prefix backend build",
     "build:frontend": "npm run --prefix frontend build",
-    "db:migrate-and-seed": "npm run sequelize --prefix backend db:migrate && npm run sequelize --prefix backend db:seed:all"
+    "db:migrate-and-seed": "npm run sequelize --prefix backend db:migrate && npm run sequelize --prefix backend db:seed"
   }
 }
