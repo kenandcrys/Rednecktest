@@ -6,7 +6,7 @@ export default function Cattle() {
 
   useEffect(() => {
     axios
-      .get("https://redneckcattlecheck.onrender.com/api/cattle")
+      .get('localhost10000/api/cattle')
       .then((response) => {
         setCattleData(response.data);
       })
@@ -14,6 +14,7 @@ export default function Cattle() {
         console.error("Error fetching cattle data:", error);
       });
   }, []);
+  
 
   const feedCard = cattleData.map((product, index) => (
 
