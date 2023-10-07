@@ -3,12 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const tableNames = [
-      "Swine",
-      "StraightGrains",
-      "SheepAndGoat",
-      "Rabbit",
-      "Poultry",
-      "Equine",
+   
       "Cattle",
       // Add other table names as needed...
     ];
@@ -268,12 +263,7 @@ module.exports = {
     // Add commands to remove seeded data if needed
     // For example, you can use queryInterface.bulkDelete to delete all rows in the tables
     const tableNames = [
-      "Swine",
-      "StraightGrains",
-      "SheepAndGoat",
-      "Rabbit",
-      "Poultry",
-      "Equine",
+   
       "Cattle",
       // Add other table names as needed...
     ];
