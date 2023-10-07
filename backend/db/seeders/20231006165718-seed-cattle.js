@@ -48,11 +48,18 @@
       },
     
       down: async (queryInterface, Sequelize) => {
-        const Op = Sequelize.Op;
-        const usernamesToDelete = userData.map((user) => user.username);
+        // Add commands to remove seeded data if needed
+        // For example, you can use queryInterface.bulkDelete to delete all rows in the tables
+        const tableNames = [
+         
+          "Cattle",
+          // Add other table names as needed...
+        ];
     
-        return queryInterface.bulkDelete('Cattle', {
-          username: { [Op.in]: usernamesToDelete },
-        });
-      },
+        for (const tableName of tableNames) {
+          await queryInterface.bulkDelete(tableName, null, {});
+        }
+      }
     };
+    
+
