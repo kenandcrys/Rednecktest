@@ -115,7 +115,7 @@ module.exports = {
     },
   
     down: async (queryInterface, Sequelize) => {
-      // Drop tables in reverse order (if needed) in the down migration
+      // Drop all the tables in reverse order
       const tableNames = [
         "Cattle",
       ];
@@ -126,19 +126,4 @@ module.exports = {
   
       return Promise.resolve();
     }
-  };
-  
-
-  down: async (queryInterface, Sequelize) => {
-    // Drop all the tables in reverse order
-    const tableNames = [
-      "Cattle",
-    ];
-
-    for (const tableName of tableNames) {
-      await queryInterface.dropTable(tableName);
-    }
-
-    return Promise.resolve();
-  },
 };
