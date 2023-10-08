@@ -160,7 +160,7 @@ h1.header {
 }
 
 
-@media screen (max-width: 270px) and (max-height: 643px) {
+@media screen and (max-width: 270px) and (max-height: 643px) {
     .card-img {
         height: fit-content;
         width: 180px;
