@@ -7,10 +7,6 @@ const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 const { ValidationError } = require("sequelize");
 
-
-const path = require("path");
-
-
 const { environment } = require("./config");
 const isProduction = environment === "production";
 
@@ -18,15 +14,6 @@ const routes = require("./routes");
 const cattleRouter = require("./routes/api/Cattle");
 
 const app = express();
-
-
-// Just added so dont be afraid to delete
-const port = process.env.PORT || 3000;
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/', (req, res) =>{
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 
 
 app.use(morgan("dev"));
@@ -62,9 +49,9 @@ app.use("/api/cattle", cattleRouter);
 app.use(routes); // Connect all the routes
 
 // //root route handler
-// app.get("/", (_req, res) => {
-//   res.send("Welcome to the home page!");
-// });
+app.get("/", (_req, res) => {
+  res.send("Welcome to the home page!");
+});
 
 // Catch unhandled requests and forward to error handler.
 app.use((_req, _res, next) => {

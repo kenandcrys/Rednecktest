@@ -6,7 +6,6 @@ const { Cattle } = require("../../db/models");
 router.get("/", async (_req, res, next) => {
   try {
     const CattleInfo = await Cattle.findAll();
-
     res.json(CattleInfo);
   } catch (error) {
     next(error)
