@@ -39,5 +39,5 @@ export default function Cattle() {
     <div className="flex card-section border">
     {feedCard}
     </div>
-    </div>;
+    </div>
 }
