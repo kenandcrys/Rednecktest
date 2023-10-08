@@ -36,12 +36,10 @@ export default function StraightGrain() {
     </div>
   ));
 
-  return (
-    <div className="centered">
-      <h2 className="bold margin-15 feed-header">Straight Grain Feed</h2>
-      <div className="flex card-section border">
-        {feedCard}
-      </div>
+  return <div className="centered">
+    <h2 className="bold margin-15 feed-header">Straight Grain Feed</h2>
+    <div className="flex card-section border">
+    {feedCard}
     </div>
-    );
+    </div>;
 }

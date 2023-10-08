@@ -15,33 +15,29 @@ export default function Poultry() {
       });
   }, []);
 
-  const feedCard = poultryData.map((poultry) => (
-    <div className="card flex centered" key={poultry.id}>
+  const feedCard = poultryData.map((product, index) => (
+
+    
+    <div className="card flex centered" key={index}>
       <img
-        src={poultry.url}
+        src={product.url}
         className="card-img margin-15"
-        alt="X-Cel Feed bag"
+        alt={product.name}
       />
       <div className="centered">
-        <h1 className="card-header bold">{poultry.name}</h1>
-        <p className="card-text">{poultry.description}</p>
-        <p className="bold card-text">Price per bag: {poultry.pricePerBag}</p>
-        <p className="bold card-text">
-          Price per 20 bags: {poultry.pricePer20}
-        </p>
-        <p className="bold card-text">
-          Price per 40 bags: {poultry.pricePer40}
-        </p>
+        <h1 className="card-header bold">{product.name}</h1>
+        <p className="card-text">{product.description}</p>
+        <p className="bold card-text">Price per bag: {product.pricePerBag}</p>
+        <p className="bold card-text">Price per 20 bags: {product.pricePer20}</p>
+        <p className="bold card-text">Price per 40 bags: {product.pricePer40}</p>
       </div>
     </div>
   ));
 
-  return (
-    <div className="centered">
-      <h2 className="bold margin-15 feed-header">Poultry Feed</h2>
-      <div className="flex card-section border">
-        {feedCard}
-      </div>
+  return <div className="centered">
+    <h2 className="bold margin-15 feed-header">Poultry Feed</h2>
+    <div className="flex card-section border">
+    {feedCard}
     </div>
-    );
+    </div>;
 }

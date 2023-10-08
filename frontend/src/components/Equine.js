@@ -19,8 +19,8 @@ export default function Equine() {
   const feedCard = equineData.map((product, index) => (
     <div className="card flex centered" key={index}>
       <img
-        className="card-img margin-15"
         src={product.url}
+        className="card-img margin-15"
         alt={product.name}
       />
       <div className="centered">
@@ -33,12 +33,10 @@ export default function Equine() {
     </div>
   ));
 
-  return (
-    <div className="centered">
-      <h2 className="bold margin-15 feed-header">Equine Feed</h2>
-      <div className="flex card-section border">
-        {feedCard}
-      </div>
+  return <div className="centered">
+    <h2 className="bold margin-15 feed-header">Equine Feed</h2>
+    <div className="flex card-section border">
+    {feedCard}
     </div>
-    );
+    </div>;
 }

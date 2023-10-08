@@ -48,7 +48,7 @@ app.use(
 app.use("/api/cattle", cattleRouter);
 app.use(routes); // Connect all the routes
 
-// //root route handler
+//root route handler
 app.get("/", (_req, res) => {
   res.send("Welcome to the home page!");
 });

@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./Home";
 import Footer from "./Footer";
 
+
 import Equine from "./Equine";
 import Cattle from "./Cattle";
 import Poultry from "./Poultry";
@@ -63,10 +64,7 @@ const Root = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link to="/" className="nav-link active" aria-current="page">
@@ -74,17 +72,16 @@ const Root = () => {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
+                  
                   <a
                     className="nav-link dropdown-toggle products"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
-                    data-bs-target="#productsDropdown" // Specify the target dropdown menu
                     aria-expanded="false"
                   >
                     Products
                   </a>
-
                   <ul className="dropdown-menu bg-lightgray">
                     <li>
                       <Link to="/equine" className="dropdown-item">
@@ -95,7 +92,7 @@ const Root = () => {
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <Link to="/Cattle" className="dropdown-item">
+                      <Link to="/cattle" className="dropdown-item">
                         Cattle
                       </Link>
                     </li>
@@ -146,19 +143,19 @@ const Root = () => {
             </div>
           </div>
         </nav>
-
+       
         <div>
-          <div>
-            <h1 className="border logo bold flex bg-lightgray">
-              RedNeck Feeds LLC
-            </h1>
+          <div >
+            <h1 className="border logo bold flex bg-lightgray">RedNeck Feeds LLC</h1>
           </div>
         </div>
       </header>
       <div>
+       
         <Outlet />
-
+        
         <Footer />
+        
       </div>
     </>
   );
